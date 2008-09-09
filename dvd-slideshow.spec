@@ -1,6 +1,6 @@
 Name:           dvd-slideshow
 Version:        0.8.0
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Command line programs for creating slideshow style DVDs
 Group:          Applications/Multimedia
 License:        GPL
@@ -61,6 +61,9 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Tue Sep 09 2008 Xavier Lamien <lxtnow[at]gmail.com> - 0.8.0-3
+- Rebuild for rpmfusion inclusion.
+
 * Mon Apr 30 2007 Ian Chapman <packages@amiga-hardware.com> 0.8.0-2%{?dist}
 - Quietened setup (-q)
 
