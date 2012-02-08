@@ -1,6 +1,6 @@
 Name:           dvd-slideshow
 Version:        0.8.0
-Release:        4%{?dist}
+Release:        5%{?dist}
 Summary:        Command line programs for creating slideshow style DVDs
 Group:          Applications/Multimedia
 License:        GPL
@@ -61,6 +61,9 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Wed Feb 08 2012 Nicolas Chauvet <kwizart@gmail.com> - 0.8.0-5
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_17_Mass_Rebuild
+
 * Sun Mar 29 2009 Thorsten Leemhuis <fedora [AT] leemhuis [DOT] info> - 0.8.0-4
 - rebuild for new F11 features
 
