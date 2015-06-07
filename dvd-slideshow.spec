@@ -1,12 +1,11 @@
 Name:           dvd-slideshow
-Version:        0.8.0
-Release:        8%{?dist}
+Version:        0.8.4
+Release:        2%{?dist}.1
 Summary:        Command line programs for creating slideshow style DVDs
 Group:          Applications/Multimedia
 License:        GPL
 URL:            http://dvd-slideshow.sourceforge.net
-Source0:        http://dl.sf.net/%{name}/dvd-slideshow-%{version}-1.tar.gz
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
+Source0:        http://dl.sf.net/%{name}/dvd-slideshow-%{version}-2.tar.gz
 Requires:       dvdauthor > 0.6.11
 Requires:       ffmpeg > 0.4.8
 Requires:       ImageMagick > 5.5.4
@@ -27,7 +26,7 @@ which generates a menu for your dvd (dvd-menu).
 
 
 %prep
-%setup -qn %{name}-%{version}-1
+%setup -qn %{name}-%{version}-2
 
 
 # Note there is no building to be done, but this surpresses rpmlint errors and
@@ -36,7 +35,6 @@ which generates a menu for your dvd (dvd-menu).
 
 
 %install
-rm -rf %{buildroot}
 mkdir -p %{buildroot}%{_bindir}
 mkdir -p %{buildroot}%{_mandir}/man1
 
@@ -49,18 +47,18 @@ install -m0755 gallery1-to-slideshow %{buildroot}%{_bindir}
 install -m0755 jigl2slideshow %{buildroot}%{_bindir}
 
 
-%clean
-rm -rf %{buildroot}
-
-
 %files
 %defattr(-,root,root,-)
 %{_mandir}/man1/*
 %{_bindir}/*
-%doc *.html COPYING.txt TODO.txt
+%doc doc/*.html COPYING.txt TODO.txt
 
 
 %changelog
+* Sun Jun 07 2015 Sérgio Basto <sergio@serjux.com> - 0.8.4-2.1
+- Update to dvd-slideshow-0.8.4-2
+- Spec clean up.
+
 * Sun Aug 31 2014 Sérgio Basto <sergio@serjux.com> - 0.8.0-8
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_21_22_Mass_Rebuild
 
