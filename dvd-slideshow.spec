@@ -1,11 +1,12 @@
 Name:           dvd-slideshow
-Version:        0.8.4
-Release:        2%{?dist}.1
+Version:        0.8.6
+%global         revision 1
+Release:        %{revision}.1%{?dist}
 Summary:        Command line programs for creating slideshow style DVDs
 Group:          Applications/Multimedia
-License:        GPL
+License:        GPLv2
 URL:            http://dvd-slideshow.sourceforge.net
-Source0:        http://dl.sf.net/%{name}/dvd-slideshow-%{version}-2.tar.gz
+Source0:        http://download.sf.net/%{name}/dvd-slideshow-%{version}-%{revision}.tar.gz
 Requires:       dvdauthor > 0.6.11
 Requires:       ffmpeg > 0.4.8
 Requires:       ImageMagick > 5.5.4
@@ -26,7 +27,7 @@ which generates a menu for your dvd (dvd-menu).
 
 
 %prep
-%setup -qn %{name}-%{version}-2
+%setup -qn %{name}-%{version}-%{revision}
 
 
 # Note there is no building to be done, but this surpresses rpmlint errors and
@@ -40,21 +41,28 @@ mkdir -p %{buildroot}%{_mandir}/man1
 
 # Install (except dvd-burn as its useless and perhaps dangerous too!)
 install -m0644 man/* %{buildroot}%{_mandir}/man1
-install -m0755 dir2slideshow %{buildroot}%{_bindir}
-install -m0755 dvd-menu %{buildroot}%{_bindir}
 install -m0755 dvd-slideshow %{buildroot}%{_bindir}
+install -m0755 dvd-menu %{buildroot}%{_bindir}
 install -m0755 gallery1-to-slideshow %{buildroot}%{_bindir}
 install -m0755 jigl2slideshow %{buildroot}%{_bindir}
+install -m0755 dir2slideshow %{buildroot}%{_bindir}
 
 
 %files
-%defattr(-,root,root,-)
+%doc doc/*.html TODO.txt dvd-slideshowrc
+%license COPYING.txt
 %{_mandir}/man1/*
 %{_bindir}/*
-%doc doc/*.html COPYING.txt TODO.txt
 
 
 %changelog
+* Fri Feb 26 2016 Sérgio Basto <sergio@serjux.com> - 0.8.6-1.1
+- Update to 0.8.6-1
+- Add License tag.
+- Fix URL source.
+- Fix License.
+- Add dvd-slideshowrc to documentation.
+
 * Sun Jun 07 2015 Sérgio Basto <sergio@serjux.com> - 0.8.4-2.1
 - Update to dvd-slideshow-0.8.4-2
 - Spec clean up.
