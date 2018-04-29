@@ -58,7 +58,7 @@ install -m0755 dir2slideshow %{buildroot}%{_bindir}
 
 %changelog
 * Sun Apr 29 2018 Sérgio Basto <sergio@serjux.com> - 0.8.6.1-1
-- Modify version to reflet it on repology.org
+- Modify version to reflect it on repology.org
 
 * Wed Feb 28 2018 RPM Fusion Release Engineering <leigh123linux@googlemail.com> - 0.8.6-1.1.3
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_28_Mass_Rebuild
