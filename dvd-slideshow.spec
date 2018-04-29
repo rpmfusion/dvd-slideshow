@@ -7,7 +7,7 @@ Summary:        Command line programs for creating slideshow style DVDs
 Group:          Applications/Multimedia
 License:        GPLv2
 URL:            http://dvd-slideshow.sourceforge.net
-Source0:        http://download.sf.net/%{name}/dvd-slideshow-%{version}-%{revision}.tar.gz
+Source0:        http://download.sf.net/%{name}/dvd-slideshow-%{realversion}-%{revision}.tar.gz
 Requires:       dvdauthor > 0.6.11
 Requires:       ffmpeg > 0.4.8
 Requires:       ImageMagick > 5.5.4
