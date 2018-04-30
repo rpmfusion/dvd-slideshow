@@ -28,7 +28,7 @@ which generates a menu for your dvd (dvd-menu).
 
 
 %prep
-%setup -qn %{name}-%{version}-%{revision}
+%setup -qn %{name}-%{realversion}-%{revision}
 
 
 # Note there is no building to be done, but this surpresses rpmlint errors and
