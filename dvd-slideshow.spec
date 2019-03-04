@@ -2,7 +2,7 @@ Name:           dvd-slideshow
 %global         realversion 0.8.6
 %global         revision 1
 Version:        %{realversion}.%{revision}
-Release:        3%{?dist}
+Release:        4%{?dist}
 Summary:        Command line programs for creating slideshow style DVDs
 License:        GPLv2
 URL:            http://dvd-slideshow.sourceforge.net
@@ -56,6 +56,9 @@ install -m0755 dir2slideshow %{buildroot}%{_bindir}
 
 
 %changelog
+* Mon Mar 04 2019 RPM Fusion Release Engineering <leigh123linux@gmail.com> - 0.8.6.1-4
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_30_Mass_Rebuild
+
 * Sun Sep 30 2018 Leigh Scott <leigh123linux@googlemail.com> - 0.8.6.1-3
 - Require genisoimage as mkisofs virtual provides was removed
 - Remove group tag
