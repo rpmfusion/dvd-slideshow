@@ -2,7 +2,7 @@ Name:           dvd-slideshow
 %global         realversion 0.8.6
 %global         revision 1
 Version:        %{realversion}.%{revision}
-Release:        5%{?dist}
+Release:        6%{?dist}
 Summary:        Command line programs for creating slideshow style DVDs
 License:        GPLv2
 URL:            http://dvd-slideshow.sourceforge.net
@@ -56,6 +56,9 @@ install -m0755 dir2slideshow %{buildroot}%{_bindir}
 
 
 %changelog
+* Tue Feb 04 2020 RPM Fusion Release Engineering <leigh123linux@gmail.com> - 0.8.6.1-6
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_32_Mass_Rebuild
+
 * Fri Aug 09 2019 RPM Fusion Release Engineering <leigh123linux@gmail.com> - 0.8.6.1-5
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_31_Mass_Rebuild
 
